@@ -1,4 +1,4 @@
-# Reto Blobs
+# Reto Circles
 ## Descripcion
 Este es un conjunto artificial creado utilizando la funcion `make_circles` de [sklearn.datasets](http://scikit-learn.org/stable/modules/classes.html#samples-generator).
 
