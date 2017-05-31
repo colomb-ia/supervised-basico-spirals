@@ -1,13 +1,13 @@
 # Reto Blobs
 ## Descripcion
-Este es un conjunto artificial creado utilizando la funcion `make_blobs` de [sklearn.datasets](http://scikit-learn.org/stable/modules/classes.html#samples-generator).
+Este es un conjunto artificial creado utilizando la funcion `make_circles` de [sklearn.datasets](http://scikit-learn.org/stable/modules/classes.html#samples-generator).
 
 ![graph](images/graph.png)
 
-Consiste en 400 datos divididos en 4 grupos.
+Consiste en 400 datos divididos en 2 grupos.
 
 ### Ranking
-Ver [ranking](https://github.com/colomb-ia/supervised-basico-blobs/blob/master/ranking.md).
+Ver [ranking](https://github.com/cgarciae/supervised-basico-circles/blob/master/ranking.md).
 
 ### Formato Datos
 Los datos se encuentran en los siguientes archivos CSV:
