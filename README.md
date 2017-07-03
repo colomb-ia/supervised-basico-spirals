@@ -1,6 +1,6 @@
 # Reto Circles
 ## Descripcion
-Este es un conjunto artificial creado utilizando la funcion `make_circles` de [sklearn.datasets](http://scikit-learn.org/stable/modules/classes.html#samples-generator).
+Este es un conjunto artificial creado utilizando funciones polares e inspirado por uno similar encontrado en [tensorflow playground](http://playground.tensorflow.org).
 
 ![graph](images/graph.png)
 
