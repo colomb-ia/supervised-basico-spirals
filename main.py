@@ -31,7 +31,7 @@ def main(r: float = 1.0, d: float = 0.2, laps: int = 3, viz: bool = False):
     # save data
     df = pd.DataFrame(dict(x0=x0, x1=x1, y=y))
 
-    df_train, df_test = train_test_split(df, train_size=0.9)
+    df_train, df_test = train_test_split(df, train_size=0.9, shuffle=True)
 
     df_train.to_csv("training-set.csv", index=False)
     df_test.to_csv("test-set.csv", index=False)
@@ -44,17 +44,29 @@ def main(r: float = 1.0, d: float = 0.2, laps: int = 3, viz: bool = False):
             go.Figure(
                 [
                     go.Scatter(
-                        x=x0,
-                        y=x1,
+                        x=df_train.x0,
+                        y=df_train.x1,
                         marker=go.scatter.Marker(
-                            color=y,
+                            color=df_train.y,
                             # size=sizes,
                             line_width=1,
                             line_color="DarkSlateGrey",
                             # opacity=opacity,
                         ),
                         mode="markers",
-                    )
+                    ),
+                    go.Scatter(
+                        x=df_test.x0,
+                        y=df_test.x1,
+                        marker=go.scatter.Marker(
+                            color=df_test.y,
+                            # size=sizes,
+                            line_width=1,
+                            line_color="DarkSlateGrey",
+                            # opacity=opacity,
+                        ),
+                        mode="markers",
+                    ),
                 ]
             )
             .update_layout(
