@@ -20,7 +20,7 @@ def main(r: float = 1.0, d: float = 0.2, laps: int = 3, viz: bool = False):
     x1 = r * t * np.sin(t)
 
     # create mirrored groups
-    y = np.concatenate([np.ones((n_samples,)), np.zeros((n_samples,))])
+    y = np.concatenate([np.ones((n_samples,)), np.zeros((n_samples,))]).astype(np.int32)
     x0 = np.concatenate([x0, -x0], axis=0)
     x1 = np.concatenate([x1, -x1], axis=0)
 
@@ -35,6 +35,9 @@ def main(r: float = 1.0, d: float = 0.2, laps: int = 3, viz: bool = False):
 
     df_train.to_csv("training-set.csv", index=False)
     df_test.to_csv("test-set.csv", index=False)
+
+    print(df_train.shape, df_train.dtypes)
+    print(df_test.shape, df_test.dtypes)
 
     if viz:
         (
